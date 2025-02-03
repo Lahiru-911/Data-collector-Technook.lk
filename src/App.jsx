@@ -24,11 +24,11 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-  
+
     try {
       const sanitizedId = formData.name.replace(/\s+/g, "_"); // Replace spaces with underscores to avoid issues
       await set(ref(db, `customers/${sanitizedId}`), { ...formData, rating });
-  
+
       alert("Data submitted successfully!");
       setFormData({
         name: "",
@@ -64,7 +64,7 @@ const App = () => {
           {/* Logo */}
           <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-md">
             <img
-              src="/src/assets/logo.png"
+              src="/logo.png"
               alt="Logo"
               className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
